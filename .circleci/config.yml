@@ -22,6 +22,14 @@ jobs:
           name: Build the Android version
           command: flutter build apk 
 
+      - run:
+          name: Build the web version
+          command:  flutter build web
+
       - store_artifacts:
           path: build/app/outputs/apk/app.apk
           destination: android/app.apk
+
+      - store_artifacts:
+          path: build/web
+          destination: web
