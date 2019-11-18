@@ -13,6 +13,10 @@ jobs:
       - run:
           name: Run Flutter doctor
           command: flutter doctor
+    
+      - run:
+          name: Run Flutter analyze
+          command: flutter analyze
 
       #- run:
       #    name: Run the application tests
@@ -26,10 +30,14 @@ jobs:
           path: build/app/outputs/apk/app.apk
           destination: android/app.apk
 
-      # Not supported by version of flutter in Docker image
-      #- run:
-      #    name: Build the web version
-      #    command:  flutter build web
-      #- store_artifacts:
-      #    path: build/web
-      #    destination: web
+      - run:
+          name: Build the web version
+          command: |
+            flutter channel dev
+            flutter upgrade
+            flutter config --enable-web
+            flutter build web
+
+      - store_artifacts:
+          path: build/web
+          destination: web
