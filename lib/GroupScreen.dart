@@ -162,7 +162,7 @@ class ItemState extends State<GroupScreen> {
   Widget _generateItemWidgets(
       List<SupplyItem> itemList, itemWidth, itemHeight) {
     final ThemeData theme = Theme.of(context);
-    final TextStyle descriptionStyle = theme.textTheme.subhead;
+    final TextStyle descriptionStyle = theme.textTheme.subtitle1;
 
     if (itemList.length == 0) {
       return Center(
@@ -215,7 +215,7 @@ class SupplyItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
-    final TextStyle descriptionStyle = theme.textTheme.subhead;
+    final TextStyle descriptionStyle = theme.textTheme.subtitle1;
 
     return SafeArea(
         top: false,
