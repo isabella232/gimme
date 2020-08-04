@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "label": "Chow",
+      "prefix": "89",
+      "image": "chow.png"
+    },
+    {
+      "label": "Water",
+      "prefix": "8960",
+      "image": "water.png"
+    },
+    {
+      "label": "Fuel",
+      "prefix": "91",
+      "image": "fuel.png"
+    },
+    {
+      "label": "Ammo",
+      "prefix": "13",
+      "image": "ammo.png"
+    }
+  ]
+}

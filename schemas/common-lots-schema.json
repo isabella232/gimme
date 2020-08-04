@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft/2019-09/schema",
+  "id": "http://18f.gsa.gov/Gimme#CommonLots",
+  "title": "Gimme Commonly Requested Lots",
+  "version": "0.1",
+  "description": "supply items and quantities that are commonly requested",
+  "type": "object",
+  "properties": {
+    "lots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "fscg": {
+            "description": "Federal Supply Classification Group",
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 4
+          },
+          "niin": {
+            "description": "National Item Identification Number",
+            "type": "string",
+            "minLength": 9,
+            "maxLength": 9
+          },
+          "quantity": {
+            "description": "number of supply items to be requested",
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "fscg",
+          "niin",
+          "quantity"
+        ]
+      }
+    }
+  },
+  "required": [
+    "lots"
+  ]
+}

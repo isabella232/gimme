@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft/2019-09/schema",
+  "id": "http://18f.gsa.gov/Gimme#Categories",
+  "title": "Gimme Categories",
+  "version": "0.1",
+  "description": "ordered groupings of supply items, using the longest-matching prefix of their Federal Supply Classification Group (FSCG)",
+  "type": "object",
+  "properties": {
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "description": "category label",
+            "type": "string",
+            "minLength": 1,
+            "$comment": "max length driven by practical UI considerations",
+            "maxLength": 32
+          },
+          "prefix": {
+            "description": "FSCG prefix of items corresponding to the category",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4
+          },
+          "image": {
+            "description": "filename of category icon under images",
+            "type": "string",
+            "minLength": 1,
+            "$comment": "max length of filename in Android",
+            "maxLength": 255
+          }
+        },
+        "required": [
+          "label",
+          "prefix",
+          "image"
+        ]
+      }
+    }
+  },
+  "required": [
+    "categories"
+  ]
+}
