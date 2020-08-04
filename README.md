@@ -1,5 +1,7 @@
 # Project Gimme
 
+A mobile shopping cart app for federal supply items.
+
 ## Builds
 Gimme builds for Android and web can be found on [CircleCI](https://circleci.com/gh/18F/gimme):
 1. Identify the project's most recent successful job on [the `master` branch](https://circleci.com/gh/18F/gimme/tree/master).
