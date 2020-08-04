@@ -52,6 +52,9 @@ flutter:
     - images/chow.png
     - images/fuel.png
     - images/water.png
+    - data/catalog.json
+    - data/categories.json
+    - data/common-lots.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "fscg": "8960",
+      "niin": "014859695",
+      "nomenclature": "Water, Drinking, Side Spout",
+      "uoi": "CS"
+    },
+    {
+      "fscg": "8960",
+      "niin": "015876603",
+      "nomenclature": "Water, Drinking, Center Spout",
+      "uoi": "CS"
+    },
+    {
+      "fscg": "8960",
+      "niin": "011244543",
+      "nomenclature": "Water, Drinking, No Spout",
+      "uoi": "CS"
+    },
+    {
+      "fscg": "8960",
+      "niin": "000000170",
+      "nomenclature": "Water, Drinking, Sterile",
+      "uoi": "CS"
+    },
+    {
+      "fscg": "8970",
+      "niin": "001491094",
+      "nomenclature": "Meal, Ready-To-Eat",
+      "uoi": "CS"
+    },
+    {
+      "fscg": "8970",
+      "niin": "016239560",
+      "nomenclature": "Meal, Ready-to-Eat, Pork-Free",
+      "uoi": "CS"
+    },
+    {
+      "fscg": "1305",
+      "niin": "015505648",
+      "nomenclature": "Cartridge, 5.56 Millimeter, BALL",
+      "uoi": "CS"
+    },
+    {
+      "fscg": "9140",
+      "niin": "000000184",
+      "nomenclature": "Diesel Fuel",
+      "uoi": "DR"
+    },
+    {
+      "fscg": "9130",
+      "niin": "000660045",
+      "nomenclature": "Gasoline, Automotive",
+      "uoi": "DR"
+    }
+  ]
+}
