@@ -61,7 +61,8 @@ In general, there should be 32dp of vertical space between major sections, and 2
 
 ## Prototypes
 
-* [Dark Mode/tvDPI (600 x 960)](https://gsa.invisionapp.com/share/PSYOV0NA43M#/430989719_TP6-Dark2_1Catalog_1Base)
-* [Tablet portrait (800 x 1280)](https://gsa.invisionapp.com/share/83YA0WTDF59#/427180982_1Catalog_1Base)
-* [Tablet landscape (1280 x 800)](https://gsa.invisionapp.com/share/Z8Y3HOLKP6N#/425341723_TL_1Catalog_1Base) 
+* [Tablet portrait (800 x 1280)](https://gsa.invisionapp.com/share/83YA0WTDF59#/427180982_1Catalog_1Base) - This contains the most complete set of views, and interactions.
+* [Tablet landscape (1280 x 800)](https://gsa.invisionapp.com/share/Z8Y3HOLKP6N#/425341723_TL_1Catalog_1Base)
 * [Mobile landscape (360 x 760)](https://gsa.invisionapp.com/share/7DXZ939N6V4#/424335805_M_Catalog_1Base)
+* [Dark Mode/tvDPI (600 x 960)](https://gsa.invisionapp.com/share/PSYOV0NA43M#/430989719_TP6-Dark2_1Catalog_1Base) - contains a number of example screens to show theme implementation. 
+
