@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gimme/common/bottom_bar.dart';
 
 // TODO: Magic layout numbers
 class AccountScreen extends StatelessWidget {
@@ -7,7 +8,7 @@ class AccountScreen extends StatelessWidget {
     return Scaffold(
       appBar: _buildAppBar(),
       body: _buildBody(context),
-      bottomNavigationBar: _buildBottomBar(context),
+      bottomNavigationBar: bottomBar(context, 2),
     );
   }
 
@@ -39,35 +40,6 @@ class AccountScreen extends StatelessWidget {
           _buildSavedLocations(context),
         ]),
       ));
-
-  // TODO: Move to common and generalize
-  Widget _buildBottomBar(BuildContext context) => BottomNavigationBar(
-        fixedColor: Colors.white,
-        unselectedItemColor: Colors.white60,
-        backgroundColor: Colors.blue,
-        currentIndex: 2,
-        // this will be set when a new tab is tapped
-        items: [
-          BottomNavigationBarItem(
-            icon: new Icon(Icons.library_books), // menu_book missing
-            title: new Text('Catalog'),
-          ),
-          BottomNavigationBarItem(
-            icon: new Icon(Icons.history),
-            title: new Text('Order History'),
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle), title: Text('Account'))
-        ],
-        onTap: (int newIndex) {
-          if (newIndex == 1) {
-            Navigator.pushNamed(context, "/orders");
-          }
-          if (newIndex == 0) {
-            Navigator.pushNamed(context, "/catalog");
-          }
-        },
-      );
 
   Widget _buildContactInfo(BuildContext context) => Container(
         padding: const EdgeInsets.only(top: 20.0, left: 40.0, right: 40.0),
