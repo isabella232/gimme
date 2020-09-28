@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gimme/common/bottom_bar.dart';
 
 // TODO: Magic layout numbers
 class CatalogScreen extends StatelessWidget {
@@ -7,7 +8,7 @@ class CatalogScreen extends StatelessWidget {
     return Scaffold(
       appBar: _buildAppBar(),
       body: _buildBody(context),
-      bottomNavigationBar: _buildBottomBar(context),
+      bottomNavigationBar: bottomBar(context, 0),
     );
   }
 
@@ -43,35 +44,6 @@ class CatalogScreen extends StatelessWidget {
         ),
         Flexible(child: _buildCommonlyRequested(context)),
       ]));
-
-  // TODO: Move to common and generalize
-  Widget _buildBottomBar(BuildContext context) => BottomNavigationBar(
-        fixedColor: Colors.white,
-        unselectedItemColor: Colors.white60,
-        backgroundColor: Colors.blue,
-        currentIndex: 0,
-        // this will be set when a new tab is tapped
-        items: [
-          BottomNavigationBarItem(
-            icon: new Icon(Icons.library_books), // menu_book missing
-            title: new Text('Catalog'),
-          ),
-          BottomNavigationBarItem(
-            icon: new Icon(Icons.history),
-            title: new Text('Order History'),
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle), title: Text('Account'))
-        ],
-        onTap: (int newIndex) {
-          if (newIndex == 1) {
-            Navigator.pushNamed(context, "/orders");
-          }
-          if (newIndex == 2) {
-            Navigator.pushNamed(context, "/account");
-          }
-        },
-      );
 
   Widget _buildSearch() => Padding(
         padding: const EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
@@ -134,9 +106,9 @@ class CatalogScreen extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(
-                padding: const EdgeInsets.all(5.0),
+                //padding: const EdgeInsets.all(5.0),
                 child: SizedBox(
-                  width: 100,
+                  width: 125,
                   child: Image.asset(imgPath),
                 ),
               ),
@@ -174,8 +146,8 @@ class CatalogScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.only(top: 20),
               child: ConstrainedBox(
-                // TODO: Make this adjust dynamically
-                constraints: BoxConstraints(maxHeight: 155),
+                // TODO: Make this adjust dynamically, making much smaller makes it start to overflow
+                constraints: BoxConstraints(maxHeight: 170),
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
