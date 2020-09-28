@@ -146,8 +146,8 @@ class CatalogScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.only(top: 20),
               child: ConstrainedBox(
-                // TODO: Make this adjust dynamically
-                constraints: BoxConstraints(maxHeight: 155),
+                // TODO: Make this adjust dynamically, making much smaller makes it start to overflow
+                constraints: BoxConstraints(maxHeight: 170),
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
